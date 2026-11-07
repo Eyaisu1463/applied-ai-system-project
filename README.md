@@ -10,7 +10,7 @@
 
 \- \*\*Applied AI Extensions:\*\* I extended this prototype into a production-ready Applied AI System by implementing:
 
-&#x20; 1. \*\*A RAG (Retrieval-Augmented Generation) Engine:\*\* Queries a local structured knowledge base (`knowledgebase's.json`) to fetch verified veterinary guidelines before generating care plans.
+&#x20; 1. \*\*A RAG (Retrieval-Augmented Generation) Engine:\*\* Queries a local structured knowledge base (`knowledge\_base.json`) to fetch verified veterinary guidelines before generating care plans.
 
 &#x20; 2. \*\*An Agentic Workflow \& Guardrail System:\*\* Performs automated input validation, scans for toxic foods/emergency symptoms, and appends mandatory safety disclaimers.
 
