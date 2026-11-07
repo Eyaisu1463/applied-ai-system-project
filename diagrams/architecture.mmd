@@ -1,0 +1,11 @@
+﻿graph TD
+    A[User Input: Pet Name & Query] --> B[Input Validation Guardrail]
+    B -->|Empty / Invalid| C[Return Graceful Error Response]
+    B -->|Valid Input| D[RAG Engine: Search knowledge_base.json]
+    D --> E[Retrieve Veterinary Guidelines & Toxic Rules]
+    E --> F[Agentic Planner & Emergency Guardrail Engine]
+    F -->|Risk Detected| G[Append Emergency Disclaimer & 0.99 Confidence]
+    F -->|Normal Care Query| H[Format Advice & 0.95 Confidence]
+    G --> I[Return Structured Care Plan]
+    H --> I
+    I --> J[Log Execution & Reliability Metrics]

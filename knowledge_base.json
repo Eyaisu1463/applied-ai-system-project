@@ -1,0 +1,14 @@
+﻿{
+  "toxic_foods": [
+    "Chocolate contains theobromine, which is toxic to dogs and cats causing heart and neurological issues.",
+    "Grapes and raisins can cause acute kidney failure in dogs.",
+    "Onions and garlic contain thiosulfate, which damages red blood cells and causes anemia."
+  ],
+  "vaccination_guidelines": [
+    "Puppies and kittens require core vaccinations (Rabies, DHPP/FVRCP) starting at 6-8 weeks of age.",
+    "Adult pets need booster shots annually or every 3 years depending on local laws and vaccine type."
+  ],
+  "emergency_signs": [
+    "Difficulty breathing, pale gums, sudden collapse, or ingestion of known toxins require immediate veterinary emergency care."
+  ]
+}
