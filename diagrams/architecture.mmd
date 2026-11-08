@@ -1,12 +1,17 @@
-﻿graph TD
-    A[User Input: Pet Name & Query] --> B{Input Guardrail}
-    B -- Empty / Invalid --> C[Reject & Return Error JSON]
-    B -- Valid --> D[RAG Retriever]
-    D --> E[Query knowledge_base.json]
-    E --> F[Agentic Triage Engine]
-    F --> G{Toxic / High-Risk Keyword Scan}
-    G -- Risk Detected --> H[Append Emergency Disclaimer & Raise Confidence]
-    G -- Normal Care --> I[Format Routine Care Guidance]
-    H --> J[Structured Output Plan]
-    I --> J
-    J --> K[Automated Reliability Test Harness]
+﻿flowchart TD
+    U["Pet owner: pet name + question"] --> G{"Input guardrail<br/>empty, too long, no words?"}
+    G -- invalid --> R["Reject with a clear error message"]
+    G -- valid --> RET["Retriever<br/>scores every rule: exact + typo-tolerant keyword match"]
+    KB[("knowledge_base.json<br/>verified pet care rules")] --> RET
+    G -- valid --> RS["Risk scanner<br/>toxins and emergency signs, independent of the KB"]
+    RET --> C["Answer composer<br/>builds the answer from retrieved rules,<br/>decides on emergency alert, computes confidence"]
+    RS --> C
+    C -- no rule matched --> NM["No verified info: ask your vet"]
+    C --> O["Output: alert + answer + sources + confidence + disclaimer"]
+    C -. every step .-> LOG[("pawpal.log")]
+    O --> H["Human in the loop:<br/>owner reads the advice, veterinarian makes the final call"]
+    NM --> H
+    T["evaluate_system.py<br/>12 predefined test cases"] -. runs the full pipeline .-> G
+    T --> S["Pass/fail summary + average confidence"]
+    S --> DEV["Developer reviews failures<br/>and updates rules or code"]
+    DEV --> KB
