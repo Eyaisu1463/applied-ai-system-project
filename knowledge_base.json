@@ -1,14 +1,64 @@
 ﻿{
-  "toxic_foods": [
-    "Chocolate contains theobromine, which is toxic to dogs and cats causing heart and neurological issues.",
-    "Grapes and raisins can cause acute kidney failure in dogs.",
-    "Onions and garlic contain thiosulfate, which damages red blood cells and causes anemia."
-  ],
-  "vaccination_guidelines": [
-    "Puppies and kittens require core vaccinations (Rabies, DHPP/FVRCP) starting at 6-8 weeks of age.",
-    "Adult pets need booster shots annually or every 3 years depending on local laws and vaccine type."
-  ],
-  "emergency_signs": [
-    "Difficulty breathing, pale gums, sudden collapse, or ingestion of known toxins require immediate veterinary emergency care."
+  "entries": [
+    {
+      "id": "toxic-chocolate",
+      "category": "toxic_food",
+      "keywords": ["chocolate", "cocoa", "brownie", "brownies", "fudge"],
+      "text": "Chocolate contains theobromine, which is toxic to dogs and cats and can cause vomiting, a racing heart, tremors and seizures. Darker chocolate is more dangerous."
+    },
+    {
+      "id": "toxic-grapes",
+      "category": "toxic_food",
+      "keywords": ["grape", "grapes", "raisin", "raisins", "sultana", "sultanas"],
+      "text": "Grapes and raisins can cause sudden kidney failure in dogs, even in small amounts."
+    },
+    {
+      "id": "toxic-onion",
+      "category": "toxic_food",
+      "keywords": ["onion", "onions", "garlic", "leek", "leeks", "chives"],
+      "text": "Onions, garlic, leeks and chives damage red blood cells and can cause anemia in dogs and cats."
+    },
+    {
+      "id": "toxic-xylitol",
+      "category": "toxic_food",
+      "keywords": ["xylitol", "gum", "sugarless"],
+      "text": "Xylitol, found in sugar-free gum and some peanut butters, can cause a dangerous drop in blood sugar and liver failure in dogs."
+    },
+    {
+      "id": "vacc-core",
+      "category": "vaccination",
+      "keywords": ["vaccine", "vaccines", "vaccination", "vaccinations", "vaccinate", "puppy", "kitten", "core"],
+      "text": "Puppies and kittens start core vaccinations (rabies, DHPP for dogs, FVRCP for cats) at 6-8 weeks of age, with repeat doses every 3-4 weeks until about 16 weeks."
+    },
+    {
+      "id": "vacc-booster",
+      "category": "vaccination",
+      "keywords": ["booster", "boosters", "shot", "shots", "rabies", "annual"],
+      "text": "Adult pets need booster shots every 1 or 3 years, depending on the vaccine type and local law. Your vet will set the exact schedule."
+    },
+    {
+      "id": "emergency-signs",
+      "category": "emergency",
+      "keywords": ["breathing", "collapse", "collapsed", "gums", "seizure", "seizures", "unconscious", "bleeding", "emergency"],
+      "text": "Difficulty breathing, pale gums, sudden collapse, seizures, heavy bleeding or eating a known toxin need emergency veterinary care right away."
+    },
+    {
+      "id": "exercise-dog",
+      "category": "exercise",
+      "keywords": ["walk", "walks", "walking", "exercise", "run", "running", "hike"],
+      "text": "Most adult dogs need 30 minutes to 2 hours of activity a day depending on breed, age and health. Puppies and senior dogs do better with shorter, gentler sessions."
+    },
+    {
+      "id": "exercise-cat",
+      "category": "exercise",
+      "keywords": ["play", "playtime", "toys", "toy", "indoor"],
+      "text": "Indoor cats benefit from two or three short play sessions (10-15 minutes) a day with toys that mimic hunting, like wands and balls."
+    },
+    {
+      "id": "feeding-general",
+      "category": "feeding",
+      "keywords": ["feed", "feeding", "meal", "meals", "portion", "portions", "diet", "kibble"],
+      "text": "Feed a complete, balanced diet made for your pet's life stage and adjust portions to keep a healthy body shape. Your vet can give you a daily calorie target."
+    }
   ]
 }
